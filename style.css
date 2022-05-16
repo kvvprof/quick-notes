@@ -1,0 +1,377 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a,
+a:focus,
+a:active {
+    outline: none;
+    color: var(--acitve-color);
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    font-family: 'Roboto Mono', monospace;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+    font-style: normal;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+
+:root {
+    --main-color: #E6DCD2;
+    --dark-color: #565656;
+    --acitve-color: #D7675C;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 7px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--acitve-color);
+}
+
+::selection {
+    background: var(--acitve-color)
+}
+
+::-moz-selection {
+    background: var(--acitve-color)
+}
+
+.notes__smile, .notes__smilelist, .notes__icons {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;   
+    -khtml-user-select: none;    
+    -moz-user-select: none;      
+    user-select: none;          
+
+  }
+
+textarea::-webkit-scrollbar {
+    background-color: var(--dark-color);
+    width: 7px;
+    border-radius: 10px;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 800px;
+}
+.header,
+.notes,
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 24px;
+}
+
+.notes {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.notes__area {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color);
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    padding-bottom: 13px;
+    max-height: 700px;
+    margin-right: 5px;
+}
+
+.notes__view {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    height: 100%;
+    width: 30%;
+    overflow: auto;
+    align-content: flex-end;
+    padding-right: 5px;
+    max-height: 700px;
+}
+
+.notes__smiles {
+    display: none;
+    background-color: #49494951;
+    border-radius: 20px;
+    overflow: auto;
+    height: 100%;
+    width: 30%;
+    padding: 5px;
+    max-height: 700px;
+}
+
+.notes__note {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    opacity: 80%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 5px 25px 10px 10px;
+    background-color: var(--dark-color);
+    color: var(--main-color);
+    font-weight: 300;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.notes__smiles ul {
+    height: 1px;
+    text-align: center;
+    margin: 3px;
+}
+
+.notes__smile {
+    display: inline-block;
+    width: 25px;
+    font-size: 26px;
+    font-style: normal;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.notes__tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 0px 10px 0px;
+    margin: 0 20px 5px 20px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.notes__icon {
+    font-size: 20px;
+    margin: 2px;
+    color: var(--main-color);
+}
+
+.notes__icon:hover {
+    font-size: 20px;
+    color: var(--acitve-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.notes__symbols {
+    display: flex;
+    align-items: flex-end;
+    font-size: 16px;
+    color: var(--main-color);
+}
+
+.notes__text {
+    height: 100%;
+    background-color: var(--dark-color);
+    color: var(--main-color);
+    padding: 10px 20px 10px 20px;
+    resize: none;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.notes__note:hover {
+    background-color: var(--acitve-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.notes__delete {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.footer {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        padding: 5px;
+    }
+
+    .wrapper {
+        max-width: 500px;
+        max-height: 800px;
+    }
+
+    .notes__tools {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    .notes__additionally,
+    .notes__symbols {
+        margin-bottom: 10px;
+    }
+
+    .notes {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .notes__view {
+        padding: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        align-content: flex-end;
+        max-height: 180px;
+        width: 100%;
+        height: 40%;
+    }
+
+    .notes__area {
+        margin-bottom: 5px;
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    .notes__smiles {
+        width: 100%;
+        height: 180%;
+        max-height: 180px;
+        margin-left: 0px;
+        padding: 3px;
+    }
+
+    .notes__note {
+        width: 100%;
+        margin: 2px;
+    }
+
+}
+
+@media screen and (max-height: 790px) {
+    .wrapper {
+        max-height: 750px;
+    }
+    .notes__area, .notes__view, .notes__smiles {
+        max-height: 620px;
+    }
+}
+
+
